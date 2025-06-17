@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Bio</a></li>
+                <li><a href="/logout">Logout</a></li> </ul>
+        </nav>
+    </header>
+    <section>
+        <div id="taskList">
+            <h2>Tasks</h2>
+            <ul id="tasksContainer">
+                {% for task in tasks %}
+                <li>
+                    {{ task.description }}
+                    <div style="display: inline-flex; gap: 5px;">
+                    <button onclick="editTask({{ task.id }}, '{{ task.description }}')">Edit</button>
+                    <button onclick="deleteTask({{ task.id }})">Delete</button>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <h5 style="margin-bottom: 3px;">Add a new task ...</h5>
+        <div id="taskForm">
+            <form id="addTaskForm" method="POST" action="/add_task">
+                <input type="text" name="task" id="newTask" placeholder="Enter a task" style="padding: 10px;width: 95%;margin-bottom: 10px;" required>
+                <button type="submit" style="width: 100%;">Add Task</button>  </form>
+        </div>
+
+        <div id="editTaskForm" style="display: none;">
+            <form method="POST" action="/edit_task">
+                <input type="hidden" id="editTaskId" name="task_id">
+                <input type="text" id="editTaskDescription" name="task" placeholder="Edit task" style="padding: 10px; width: 95%; margin-bottom: 10px;" required>
+                <button type="submit" style="width: 100%;">Save Edit</button>
+                <button type="button" onclick="cancelEdit()">Cancel</button>
+            </form>
+        </div>
+
+    </section>
+    {% if error %}
+    <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <script src="../static/script.js"></script>
+    <script src="../static/script2.js"></script>
+</body>
+</html>

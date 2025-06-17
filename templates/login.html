@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Bio</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nev>
+    </header>
+    <div class="main-section">
+        <div class="centered-box" id="login">
+            <section>
+                <h1>Login</h1>
+                <form action="/login" method="post" id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="login-username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                    <input type="submit" value="Login">
+                </form>
+                <p id="swapRegister">Need to register?
+                </p>
+            </section>
+        </div>
+
+        <!-- Below is the registration form-->
+        <div class="centered-box" id="register">
+            <section>
+                <h1>Register</h1>
+                <form action="/register" method="post" id="RegisterForm">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required>
+                    <label for="confirm_password">Confirm password:</label>
+                    <input type="password" name="confirm_password" id="confirm_password" required>
+                   <input type="submit" value="Register">
+                </form>
+                <p id="swapLogin">Need to login?</p>
+            </section>
+        </div>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>

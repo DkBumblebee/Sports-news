@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #160ca0;
+    color: white;
+    padding: 10px 0;
+    justify-content: right;
+}
+.centered-box {
+    margin: 10px;
+    width: 45%;
+    height: 600px;
+    background-color: #828285; /* White background */
+    box-shadow: 0px 4px 10px rgba(23, 25, 3, 0.2); /* Shadow */
+    border-radius: 10px; /* Optional rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Arial, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    color: #333; /* Dark text */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a, a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+form input, form button {
+    display: flex;
+    margin: 10px 29px;
+    padding: 10px;
+    width: 100%;
+}
+
+#taskList ul {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    color: #1f10f6;
+    background-color: #f1ad72;
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Shadow */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* BIFALE's SECTION of CSS */
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#taskList{
+    margin: 20px 0;
+}
+
+#register{
+    visibility: hidden;
+    opacity: 0;
+}
+
+#swapRegister, #swapLogin{
+    color: whitesmoke;
+    cursor: pointer;
+}
